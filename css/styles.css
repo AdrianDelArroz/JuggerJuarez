@@ -220,7 +220,7 @@ nav ul li a:hover {
 
 .QueEsJugger-container p {
     flex: 1;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.5em;
     margin-bottom: 5px;
 }
@@ -241,9 +241,25 @@ nav ul li a:hover {
 }
 
 .regla p {
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: justify;
     margin-bottom: 5px;
+}
+
+/*seccion de armas*/
+
+/*seccion de historia*/
+.HistoriaJugger-container p {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+.HistoriaJugger-container img {
+    max-width: 20%;
+    height: auto;
+    border-radius: 10px;
 }
 
 
