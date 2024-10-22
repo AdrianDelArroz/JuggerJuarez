@@ -247,6 +247,56 @@ nav ul li a:hover {
 }
 
 /*seccion de armas*/
+.armas-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.grid-armas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Para pantallas medianas (tabletas), usamos 2 columnas */
+@media (max-width: 768px) {
+    .grid-armas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Para pantallas pequeñas (móviles), usamos 1 columna */
+@media (max-width: 480px) {
+    .grid-armas {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+}
+
+.arma-recuadro {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arma-recuadro h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.arma-recuadro img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.arma-recuadro p {
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
 
 /*seccion de historia*/
 .HistoriaJugger-container p {
