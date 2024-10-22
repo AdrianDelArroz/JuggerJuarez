@@ -252,6 +252,13 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+.armas-container img {
+    display: block;
+    margin: 0 auto; /* Esto centra la imagen horizontalmente */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
 .grid-armas {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
@@ -275,7 +282,7 @@ nav ul li a:hover {
 
 .arma-recuadro {
     background-color: #f9f9f9;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -286,9 +293,10 @@ nav ul li a:hover {
 }
 
 .arma-recuadro img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 0%;
 }
 
 .arma-recuadro p {
