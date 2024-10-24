@@ -429,3 +429,86 @@ li {
     font-weight: bold;
 }
 
+/*---Pagina de estadisticas de equipo---*/
+/* Contenedor principal */
+.stats-equipo-container {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nombre-equipo {
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.seccion-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-equipo {
+    width: 30%;
+    text-align: center;
+}
+
+.logo-equipo-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.tabla-stats, .tabla-miembros {
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.tabla-stats th, .tabla-stats td,
+.tabla-miembros th, .tabla-miembros td {
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+.tabla-stats th {
+    background-color: #333;
+    color: white;
+}
+
+.tabla-miembros th {
+    background-color: #333;
+    color: white;
+}
+
+/* Botón de edición */
+.edit-button {
+    background-color: #E0E0E0;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Botón de vuelta */
+.back-button-container {
+    text-align:left;
+    margin-top: 2rem;
+}
+
+.back-button {
+    background-color: #E0E0E0;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
