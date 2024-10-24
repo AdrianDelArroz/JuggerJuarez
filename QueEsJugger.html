@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jugger Juárez</title>
         <link rel="stylesheet" href="css/styles.css">
@@ -9,144 +9,154 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
-    <header class="flex items-center justify-center h-16 relative">
-        <div class="logo absolute left-5">
-            <img src="img/logo.png" alt="Logo" class="h-full">
-        </div>
-        <nav>
-            <ul class="flex gap-4">
-                <li><a href="#" class="text-white font-bold p-4 border-2 border-white bg-[#5E492A] hover:bg-white hover:text-[#5E492A]">Equipos Locales</a></li>
-                <li><a href="Index.html" class="text-white font-bold p-4 border-2 border-white bg-[#5E492A] hover:bg-white hover:text-[#5E492A]">Página Principal</a></li>
-                <li class="active"><a href="#" class="text-white font-bold p-4 border-2 border-transparent">¿Qué es Jugger?</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="QueEsJugger-container">
-            <h1>¿QUÉ ES JUGGER?</h1>
-            <div class="content">
-                <div>
-                    <p>El jugger es una disciplina de equipo originado en Alemania entre los años 1989 y 1995, inspirado en la película "La sangre de los héroes" de 1989. Se trata de una actividad deportiva de equipo que combina elementos de rugby y esgrima. </p>
-                    <p>El jugger se basa en la habilidad y la estrategia, no en la fuerza de los jugadores. El reglamento limita en todo momento los golpes fuertes y el contacto físico entre jugadores. </p>
-                    <p>El jugger se basa en la mayor anotación de puntos en la base del equipo opuesto. La notación se consigue cuando el móvil, llamado Jugg, se introduce en la base. En la versión jugada en Australia y algunos lugares de Estados Unidos, el jugg presenta un aro o asa y es «clavado» en una estaca. </p>
-                    <p>Solamente un jugador de cada equipo, el corredor, está autorizado para tocar físicamente el jugg. Solo puede tocar el jugg o móvil con sus manos. El resto de los jugadores portan los denominados pompfens —instrumentos con forma de arma recubiertos de material blando— y los utilizan para enfrentarse a los jugadores del equipo contrario y proteger a su corredor.</p>
-                </div>
-                <img src="img/jugger-ejemplo.jpg" alt="Jugadores de Jugger">
+    </head>
+    <body>
+        <!--Header con logo y botones de navegacion del sitio-->
+        <header class="header">
+            <div class="logo absolute left-5">
+                <img src="img/logo.png" alt="Logo" class="h-full">
             </div>
-            <div class="reglas-juego-container">
-                <h1>REGLAS DE JUEGO</h1>
-                <div class="regla">
-                    <h2>Dinámica básica</h2>
-                    <p>El juego comienza después de que el árbitro dé la salida con la frase «¡Tres, dos, uno, jugger!».</p>
-                    <p>Al comienzo del juego y tras cada anotación de un punto, el jugg se sitúa en el centro del campo de juego. Los jugadores se disponen en el fondo de cada campo, donde volverán tras cada notación.</p>
-                    <p>El único que tiene permitido portar el jugg e introducirlo en la marca es el corredor, pudiendo golpearlo o lanzarlo con las manos exclusivamente. El resto de jugadores pueden hacer contacto con el jugg a través de sus armas, golpeándolo o arrastrándolo. Para que la anotación de un punto sea válida, el jugg debe permanecer dentro de la marca después de ser soltada por el corredor.</p>
-                </div>
-                <div class="regla">
-                    <h2>Fuera de juego</h2>
-                    <p>Cualquier jugador que entre en contacto con las líneas del campo o toque con cualquier parte de su cuerpo fuera del campo, será considerado bloqueado. </p>
-                    <p>El jugg no podrá ser lanzado fuera del campo y si saliese fuera, un árbitro lo colocará en la banda a la altura del punto por el cual salió o el corredor podrá salir a recoger el móvil.</p>
-                </div>
-                <div class="regla">
-                    <h2>Los bloqueos</h2>
-                    <p>Los impactos se efectúan cuando un jugador toca a otro jugador con su arma, dentro de las normas del reglamento. Cuando esto se dé el jugador será bloqueado y permanecerá arrodillado con una rodilla en el suelo sin poder intervenir en el juego, el bloqueo será de cinco piedras o intervalos acústicos. El impacto de una cadena o kette bloquea ocho intervalos o piedras. </p>
-                    <p>Si dos jugadores se tocan con sus armas de manera simultánea, los dos quedan bloqueados. </p>
-                    <p>Para que un toque sea un bloqueo, el arma debe alcanzar al oponente en una zona válida. Las zonas válidas de tocado son todo el cuerpo a excepción del cuello, cabeza y las manos. </p>
-                </div>
-                <div class="regla">
-                    <h2>El pineo</h2>
-                    <p>Se puede pinear a un jugador bloqueado para prolongar su tiempo de bloqueo. Para ello un jugador deberá colocar su arma sobre una zona válida del cuerpo del jugador arrodillado. El pineo se prolongará indefinidamente hasta que el jugador retire su arma del jugador bloqueado. </p>
-                </div>
-                <div class="regla">
-                    <h2>Lucha entre corredores</h2>
-                    <p>En el caso de que los corredores se enfrentasen entre sí, pueden luchar solamente con agarres desde la clavícula a la cadera. Generalmente el objetivo de un corredor será sacar fuera del campo a su oponente para que este sufra un bloqueo al tocar fuera, o sea impactado por un jugador. </p>
-                    <p>Esta lucha solo podrá darse entre corredores, el resto de jugadores solo puede entrar en contacto con el resto empleando sus armas. </p>
-                </div>
-                <div class="regla">
-                    <h2>Arbitraje</h2>
-                    <p>Dada la complejidad del juego, los partidos de jugger son guiados por cuatro árbitros. Dos de ellos, el árbitro principal y el árbitro secundario, recorren las líneas laterales y vigilan el cumplimiento de las reglas. Los dos árbitros restantes, los árbitros de base, vigilan las marcas y controlan si los puntos son convertidos de acuerdo al reglamento, cuando es el caso, son ellos los encargados de declararlo como válido. </p>
-                </div>
-                <div class="regla">
-                    <h2>Penalizaciones</h2>
-                    <p>Originalmente no se preveían penalizaciones en el jugger. Cuando se cometía una infracción del reglamento, el árbitro lo notificaba y se retomaba el juego en la última jugada válida. </p>
-                    <p>En 2007, el Jugger e. V. de Berlín modificó el reglamento para todos los torneos que se disputan en dicha ciudad, incluido el Campeonato Alemán. Se introdujeron las siguientes penalizaciones: </p>
-                    <p>1. Paso de la pelota al equipo contrario.</p>
-                    <p>2. Amonestación: </p>
-                    <p>-a. Cuando un jugador vuelve al juego antes de que termine su bloqueo.</p>
-                    <p>-b. Cuando un jugador, al principio de una jugada, cruza la línea de fondo antes de que el árbitro libere el juego.</p>
-                    <p>-c. Cuando un jugador tira el móvil fuera del campo a propósito.</p>
-                    <p>3. Expulsión por el resto del tiempo actual: cuando un jugador ejerce violencia o ataca verbalmente al oponente.</p>
-                    <p>4. Puntos para el oponente: cuando un equipo acumula tres amonestaciones.</p>
-                </div>
-            </div>
-            <div class="armas-container">
-                <h1>ARMAS</h1>
-                <div class="grid-armas">
-                    <!-- Recuadro 1 -->
-                    <div class="arma-recuadro">
-                        <h2>Mandoble</h2>
-                        <img src="img/mandoble.png" alt="Mandoble">
-                        <p>Puede medir hasta 140 cm, repartidos en 40 cm de agarre y 100 cm de filo. Debe ser manejada con las dos manos dispuestas sobre el agarre.</p>
-                    </div>
-                    <!-- Recuadro 2 -->
-                    <div class="arma-recuadro">
-                        <h2>Espadas cortas</h2>
-                        <img src="img/espadas-duales.png" alt="Espadas duales">
-                        <p>Pueden medir hasta 85 cm, partidos en 20 cm de agarre y 65 cm de filo.</p>
-                    </div>
-                    <!-- Recuadro 3 -->
-                    <div class="arma-recuadro">
-                        <h2>Espada y escudo</h2>
-                        <img src="img/espada-escudo.png" alt="Espada y escudo">
-                        <p>El escudo un elemento defensivo de forma circular con un diámetro máximo de 60 cm. No se permite golpear o pinear con él.</p>
-                    </div>
-                    <!-- Recuadro 4 -->
-                    <div class="arma-recuadro">
-                        <h2>Bastón/Stab</h2>
-                        <img src="img/baston.png" alt="Bastón">
-                        <p>Puede medir hasta 180 cm de largo repartidos en 90 cm zona de golpeo, 20 cm zona de agarre, 50 cm de zona de defensa, 20 cm de zona de agarre. No se puede estocar con esta arma.</p>
-                    </div>
-                    <!-- Recuadro 5 -->
-                    <div class="arma-recuadro">
-                        <h2>Q-Tip/Cotonete</h2>
-                        <img src="img/qtip-cotonete.png" alt="Q-Tip/Cotonete">
-                        <p>Puede medir hasta 200 cm de largo repartidas en 60 cm zona de golpeo, 80 cm agarre, y 60 cm zona de golpeo.</p>
-                    </div>
-                    <!-- Recuadro 6 -->
-                    <div class="arma-recuadro">
-                        <h2>Cadena/Kette</h2>
-                        <img src="img/bola-cadena.png" alt="Bola en cadena">
-                        <p>Tiene una medida máxima de 320 cm. El conjunto está conformado por una pelota de espuma de 20 cm de diámetro unida a una correa o soga con agarre de 300 cm.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="HistoriaJugger-container">
-                <h1>HISTORIA DEL JUGGER</h1>
-                <div class="content">
-                    <img src="img/TheBloodOfHeroes.jpg" alt="The Blood of Heroes, 1989">
-                    <div>
-                        <p>El jugger fue desarrollado a principios de los años 90 por seguidores de la película australiana La sangre de los héroes (The Blood of Heroes, 1989), una película de ciencia ficción distópica en la cual se describe una sociedad sin tabúes que juega a un deporte mestizo entre un juego de pelota y artes marciales. El primer partido documentado tuvo lugar en 1993 en un evento de juegos de rol en vivo. En 1995 se realizó en Hamburgo el primer torneo en el nuevo deporte, que fue sumando adeptos de a poco. En 1998 se fundó el Campeonato Alemán y en 2003 se creó la Liga Alemana de Jugger (Jugger League), en la cual se desarrolla el campeonato oficial nacional. En 2007 se realizó el primer torneo con participación internacional. En el mismo año se creó la Asociación de Jugger (Jugger e. V.) que logró la oficialización definitiva del deporte. </p>
-                        <p>Si bien el centro del desarrollo del jugger sigue siendo Alemania, hoy se juega además en Irlanda, Estados Unidos, México Inglaterra, Dinamarca, Australia, España, Argentina, Costa Rica, Uruguay, Brasil y Colombia. En Estados Unidos, si bien a nivel mucho menor que en Alemania, tuvo un desarrollo independiente, lo que explica que algunas reglas difieran con las alemanas. Lo mismo sucede en Australia. En Costa Rica el reglaje es en su mayoría igual al alemán. Además se reconoce a Costa Rica como el primer país en Hispanoamérica en practicar el jugger. </p>
-                        <p>Uno de los torneos con mayor importancia es el Campeonato Alemán que se disputa en Berlín desde el año 1998. Los equipos más exitosos fueron Gorditos Cojones Hamburgo con seis títulos (al principio bajo el nombre de Sackwut), seguido por Rigor Mortis Berlin con dos y Mercyless Bastards con uno. Mientras tanto, el Campeonato de Hamburgo es el que con más tradición cuenta, ya que se disputa desde 1995.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <nav>
+                <ul class="flex gap-4">
+                    <li><a href="EquiposLocales.html" >Equipos Locales</a></li>
+                    <li><a href="Index.html" >Página Principal</a></li>
+                    <li class="active"><a href="#" >¿Qué es Jugger?</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <footer class="footer">
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-                    <img src="img/facebook-icon.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                    <img src="img/instagram-icon.png" alt="Instagram">
-                </a>
-                <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
-                    <img src="img/tiktok-icon.png" alt="TikTok">
-                </a>
+        <main>
+            <!--Seccion de "¿QUE ES JUGGER?"-->
+            <div class="QueEsJugger-container">
+                <h1>¿QUÉ ES JUGGER?</h1>
+                <div class="content">
+                    <div>
+                        <p>El jugger es una disciplina de equipo originado en Alemania entre los años 1989 y 1995, inspirado en la película "La sangre de los héroes" de 1989. Se trata de una actividad deportiva de equipo que combina elementos de rugby y esgrima. </p>
+                        <p>El jugger se basa en la habilidad y la estrategia, no en la fuerza de los jugadores. El reglamento limita en todo momento los golpes fuertes y el contacto físico entre jugadores. </p>
+                        <p>El jugger se basa en la mayor anotación de puntos en la base del equipo opuesto. La notación se consigue cuando el móvil, llamado Jugg, se introduce en la base. En la versión jugada en Australia y algunos lugares de Estados Unidos, el jugg presenta un aro o asa y es «clavado» en una estaca. </p>
+                        <p>Solamente un jugador de cada equipo, el corredor, está autorizado para tocar físicamente el jugg. Solo puede tocar el jugg o móvil con sus manos. El resto de los jugadores portan los denominados pompfens —instrumentos con forma de arma recubiertos de material blando— y los utilizan para enfrentarse a los jugadores del equipo contrario y proteger a su corredor.</p>
+                    </div>
+                    <img src="img/jugger-ejemplo.jpg" alt="Jugadores de Jugger">
+                </div>
+
+                <!--Seccion de "REGLAS DE JUEGO"-->
+                <div class="reglas-juego-container">
+                    <h1>REGLAS DE JUEGO</h1>
+                    <div class="regla">
+                        <h2>Dinámica básica</h2>
+                        <p>El juego comienza después de que el árbitro dé la salida con la frase «¡Tres, dos, uno, jugger!».</p>
+                        <p>Al comienzo del juego y tras cada anotación de un punto, el jugg se sitúa en el centro del campo de juego. Los jugadores se disponen en el fondo de cada campo, donde volverán tras cada notación.</p>
+                        <p>El único que tiene permitido portar el jugg e introducirlo en la marca es el corredor, pudiendo golpearlo o lanzarlo con las manos exclusivamente. El resto de jugadores pueden hacer contacto con el jugg a través de sus armas, golpeándolo o arrastrándolo. Para que la anotación de un punto sea válida, el jugg debe permanecer dentro de la marca después de ser soltada por el corredor.</p>
+                    </div>
+                    <div class="regla">
+                        <h2>Fuera de juego</h2>
+                        <p>Cualquier jugador que entre en contacto con las líneas del campo o toque con cualquier parte de su cuerpo fuera del campo, será considerado bloqueado. </p>
+                        <p>El jugg no podrá ser lanzado fuera del campo y si saliese fuera, un árbitro lo colocará en la banda a la altura del punto por el cual salió o el corredor podrá salir a recoger el móvil.</p>
+                    </div>
+                    <div class="regla">
+                        <h2>Los bloqueos</h2>
+                        <p>Los impactos se efectúan cuando un jugador toca a otro jugador con su arma, dentro de las normas del reglamento. Cuando esto se dé el jugador será bloqueado y permanecerá arrodillado con una rodilla en el suelo sin poder intervenir en el juego, el bloqueo será de cinco piedras o intervalos acústicos. El impacto de una cadena o kette bloquea ocho intervalos o piedras. </p>
+                        <p>Si dos jugadores se tocan con sus armas de manera simultánea, los dos quedan bloqueados. </p>
+                        <p>Para que un toque sea un bloqueo, el arma debe alcanzar al oponente en una zona válida. Las zonas válidas de tocado son todo el cuerpo a excepción del cuello, cabeza y las manos. </p>
+                    </div>
+                    <div class="regla">
+                        <h2>El pineo</h2>
+                        <p>Se puede pinear a un jugador bloqueado para prolongar su tiempo de bloqueo. Para ello un jugador deberá colocar su arma sobre una zona válida del cuerpo del jugador arrodillado. El pineo se prolongará indefinidamente hasta que el jugador retire su arma del jugador bloqueado. </p>
+                    </div>
+                    <div class="regla">
+                        <h2>Lucha entre corredores</h2>
+                        <p>En el caso de que los corredores se enfrentasen entre sí, pueden luchar solamente con agarres desde la clavícula a la cadera. Generalmente el objetivo de un corredor será sacar fuera del campo a su oponente para que este sufra un bloqueo al tocar fuera, o sea impactado por un jugador. </p>
+                        <p>Esta lucha solo podrá darse entre corredores, el resto de jugadores solo puede entrar en contacto con el resto empleando sus armas. </p>
+                    </div>
+                    <div class="regla">
+                        <h2>Arbitraje</h2>
+                        <p>Dada la complejidad del juego, los partidos de jugger son guiados por cuatro árbitros. Dos de ellos, el árbitro principal y el árbitro secundario, recorren las líneas laterales y vigilan el cumplimiento de las reglas. Los dos árbitros restantes, los árbitros de base, vigilan las marcas y controlan si los puntos son convertidos de acuerdo al reglamento, cuando es el caso, son ellos los encargados de declararlo como válido. </p>
+                    </div>
+                    <div class="regla">
+                        <h2>Penalizaciones</h2>
+                        <p>Originalmente no se preveían penalizaciones en el jugger. Cuando se cometía una infracción del reglamento, el árbitro lo notificaba y se retomaba el juego en la última jugada válida. </p>
+                        <p>En 2007, el Jugger e. V. de Berlín modificó el reglamento para todos los torneos que se disputan en dicha ciudad, incluido el Campeonato Alemán. Se introdujeron las siguientes penalizaciones: </p>
+                        <p>1. Paso de la pelota al equipo contrario.</p>
+                        <p>2. Amonestación: </p>
+                        <p>-a. Cuando un jugador vuelve al juego antes de que termine su bloqueo.</p>
+                        <p>-b. Cuando un jugador, al principio de una jugada, cruza la línea de fondo antes de que el árbitro libere el juego.</p>
+                        <p>-c. Cuando un jugador tira el móvil fuera del campo a propósito.</p>
+                        <p>3. Expulsión por el resto del tiempo actual: cuando un jugador ejerce violencia o ataca verbalmente al oponente.</p>
+                        <p>4. Puntos para el oponente: cuando un equipo acumula tres amonestaciones.</p>
+                    </div>
+                </div>
+
+                <!--Seccion de "ARMAS"-->
+                <div class="armas-container">
+                    <h1>ARMAS</h1>
+                    <div class="grid-armas">
+                        <!-- Recuadro 1 -->
+                        <div class="arma-recuadro">
+                            <h2>Mandoble</h2>
+                            <img src="img/mandoble.png" alt="Mandoble">
+                            <p>Puede medir hasta 140 cm, repartidos en 40 cm de agarre y 100 cm de filo. Debe ser manejada con las dos manos dispuestas sobre el agarre.</p>
+                        </div>
+                        <!-- Recuadro 2 -->
+                        <div class="arma-recuadro">
+                            <h2>Espadas cortas</h2>
+                            <img src="img/espadas-duales.png" alt="Espadas duales">
+                            <p>Pueden medir hasta 85 cm, partidos en 20 cm de agarre y 65 cm de filo.</p>
+                        </div>
+                        <!-- Recuadro 3 -->
+                        <div class="arma-recuadro">
+                            <h2>Espada y escudo</h2>
+                            <img src="img/espada-escudo.png" alt="Espada y escudo">
+                            <p>El escudo un elemento defensivo de forma circular con un diámetro máximo de 60 cm. No se permite golpear o pinear con él.</p>
+                        </div>
+                        <!-- Recuadro 4 -->
+                        <div class="arma-recuadro">
+                            <h2>Bastón/Stab</h2>
+                            <img src="img/baston.png" alt="Bastón">
+                            <p>Puede medir hasta 180 cm de largo repartidos en 90 cm zona de golpeo, 20 cm zona de agarre, 50 cm de zona de defensa, 20 cm de zona de agarre. No se puede estocar con esta arma.</p>
+                        </div>
+                        <!-- Recuadro 5 -->
+                        <div class="arma-recuadro">
+                            <h2>Q-Tip/Cotonete</h2>
+                            <img src="img/qtip-cotonete.png" alt="Q-Tip/Cotonete">
+                            <p>Puede medir hasta 200 cm de largo repartidas en 60 cm zona de golpeo, 80 cm agarre, y 60 cm zona de golpeo.</p>
+                        </div>
+                        <!-- Recuadro 6 -->
+                        <div class="arma-recuadro">
+                            <h2>Cadena/Kette</h2>
+                            <img src="img/bola-cadena.png" alt="Bola en cadena">
+                            <p>Tiene una medida máxima de 320 cm. El conjunto está conformado por una pelota de espuma de 20 cm de diámetro unida a una correa o soga con agarre de 300 cm.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Seccion de "HISTORIA DEL JUGGER"-->
+                <div class="HistoriaJugger-container">
+                    <h1>HISTORIA DEL JUGGER</h1>
+                    <div class="content">
+                        <img src="img/TheBloodOfHeroes.jpg" alt="The Blood of Heroes, 1989">
+                        <div>
+                            <p>El jugger fue desarrollado a principios de los años 90 por seguidores de la película australiana La sangre de los héroes (The Blood of Heroes, 1989), una película de ciencia ficción distópica en la cual se describe una sociedad sin tabúes que juega a un deporte mestizo entre un juego de pelota y artes marciales. El primer partido documentado tuvo lugar en 1993 en un evento de juegos de rol en vivo. En 1995 se realizó en Hamburgo el primer torneo en el nuevo deporte, que fue sumando adeptos de a poco. En 1998 se fundó el Campeonato Alemán y en 2003 se creó la Liga Alemana de Jugger (Jugger League), en la cual se desarrolla el campeonato oficial nacional. En 2007 se realizó el primer torneo con participación internacional. En el mismo año se creó la Asociación de Jugger (Jugger e. V.) que logró la oficialización definitiva del deporte. </p>
+                            <p>Si bien el centro del desarrollo del jugger sigue siendo Alemania, hoy se juega además en Irlanda, Estados Unidos, México Inglaterra, Dinamarca, Australia, España, Argentina, Costa Rica, Uruguay, Brasil y Colombia. En Estados Unidos, si bien a nivel mucho menor que en Alemania, tuvo un desarrollo independiente, lo que explica que algunas reglas difieran con las alemanas. Lo mismo sucede en Australia. En Costa Rica el reglaje es en su mayoría igual al alemán. Además se reconoce a Costa Rica como el primer país en Hispanoamérica en practicar el jugger. </p>
+                            <p>Uno de los torneos con mayor importancia es el Campeonato Alemán que se disputa en Berlín desde el año 1998. Los equipos más exitosos fueron Gorditos Cojones Hamburgo con seis títulos (al principio bajo el nombre de Sackwut), seguido por Rigor Mortis Berlin con dos y Mercyless Bastards con uno. Mientras tanto, el Campeonato de Hamburgo es el que con más tradición cuenta, ya que se disputa desde 1995.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
-    </main>
-</body>
+
+            <!--Footer con links a redes sociales-->
+            <footer class="footer">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/JuggerCiudadJuarez" target="_blank" aria-label="Facebook">
+                        <img src="img/facebook-icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/juggerciudadjuarez" target="_blank" aria-label="Instagram">
+                        <img src="img/instagram-icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/@juggercd.juarez3566" target="_blank" aria-label="youtube">
+                        <img src="img/youtube-icon.png" alt="youtube">
+                    </a>
+                </div>
+            </footer>
+        </main>
+    </body>
 </html>
