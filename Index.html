@@ -11,35 +11,62 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     </head>
     <body>
-        <header class="flex items-center justify-center h-16 relative">
+        <!--Header con logo y botones de navegacion del sitio-->
+        <header class="header">
             <div class="logo absolute left-5">
                 <img src="img/logo.png" alt="Logo" class="h-full">
             </div>
             <nav>
                 <ul class="flex gap-4">
-                    <li><a href="#" class="text-white font-bold p-4 border-2 border-white bg-[#5E492A] hover:bg-white hover:text-[#5E492A]">Equipos Locales</a></li>
-                    <li class="active"><a href="#" class="text-white font-bold p-4 border-2 border-transparent">Página Principal</a></li>
-                    <li><a href="QueEsJugger.html" class="text-white font-bold p-4 border-2 border-white bg-[#5E492A] hover:bg-white hover:text-[#5E492A]">¿Qué es Jugger?</a></li>
+                    <li><a href="EquiposLocales.html" >Equipos Locales</a></li>
+                    <li class="active"><a href="#" >Página Principal</a></li>
+                    <li><a href="QueEsJugger.html" >¿Qué es Jugger?</a></li>
                 </ul>
             </nav>
         </header>
     
         <main>
+            <!--Seccion de "NOTICIAS Y EVENTOS"-->
             <section class="noticias-eventos">
                 <h1>NOTICIAS Y EVENTOS</h1>
                 <div class="eventos-slider">
-                    <div class="evento">
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid02kNfNqxNyVWjtw7jqNFoUFMHjvqDWE4YeFgNGacsFW6trGjLgwmDnVAWqHuPSZs2Sl&show_text=true&width=500" width="500" height="728" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                    <div class="evento">
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid02qpH9iRvYe7YmwCeTxRzHmyN7DAX5GhHsvokgbvQfaSLAYhcJZu3CMyTzUnf1a97yl&show_text=true&width=500" width="300" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                    <div class="evento">
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid0VUhgwsa4bMzRH1wuy2cBdsM4zafbv3kGZmmmbMbUYUo7L1TyMsbeqR9CXHCFiQrpl&show_text=true&width=500" width="300" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <div class="carrousel">
+                        <div class="grande">
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid02kNfNqxNyVWjtw7jqNFoUFMHjvqDWE4YeFgNGacsFW6trGjLgwmDnVAWqHuPSZs2Sl&show_text=true&width=500" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid02qpH9iRvYe7YmwCeTxRzHmyN7DAX5GhHsvokgbvQfaSLAYhcJZu3CMyTzUnf1a97yl&show_text=true&width=500" width="300" height="385" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid0VUhgwsa4bMzRH1wuy2cBdsM4zafbv3kGZmmmbMbUYUo7L1TyMsbeqR9CXHCFiQrpl&show_text=true&width=500" width="300" height="435" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid0HxEJqzKGvKRorjRKVVvdLwC9YFihDo45wUGTuoDFzXhsd22dDUWNkZETZ7JL8hJ3l&show_text=true&width=500" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>                            
+                            </div>
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid07TPDi7fjFzWYDP6679UCZ1H16AdhGigc8M6Y1fSCSrEQtf6V5Qgca4yqGsHDU4fUl&show_text=true&width=500" width="300" height="485" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>                            
+                            </div>
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid036ncTsiwQpmhDp9xs5s1Vw8BEevwcjVPBV7732i62Qga6QNzqsP8rbSdw5wssZubml&show_text=true&width=500" width="300" height="430" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>                            
+                            </div>
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid0TBFWe6QGqkYo1KhAgqsiZ3gK4F4bnYb2855chZ7rDg2hmwGeeZfgBufCzL16h6iKl&show_text=true&width=500" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="evento">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJuggerCiudadJuarez%2Fposts%2Fpfbid0DBAW74C9V46NV2SazkN9iUcifuoQcZ2ETRib2KU76gtjFU4xfwT6Yk45MFdk9FLtl&show_text=true&width=500" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                        </div>
+                
+                        <ul class="puntos">
+                            <li class="punto activo"></li>
+                            <li class="punto"></li>
+                        </ul>
                     </div>
                 </div>
             </section>
             
+            <!--Seccion de "Quienes somos"-->
             <div class="quienes-somos-container">
                 <section class="quienes-somos" style="background-image: url('img/Fondo.jpg');">
                     <h2>Quiénes Somos</h2>
@@ -51,22 +78,24 @@
                     </div>
                 </section>
             </div>
+
+            <!--Footer con links a redes sociales-->
             <footer class="footer">
                 <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <a href="https://www.facebook.com/JuggerCiudadJuarez" target="_blank" aria-label="Facebook">
                         <img src="img/facebook-icon.png" alt="Facebook">
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/juggerciudadjuarez" target="_blank" aria-label="Instagram">
                         <img src="img/instagram-icon.png" alt="Instagram">
                     </a>
-                    <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
-                        <img src="img/tiktok-icon.png" alt="TikTok">
+                    <a href="https://www.youtube.com/@juggercd.juarez3566" target="_blank" aria-label="youtube">
+                        <img src="img/youtube-icon.png" alt="youtube">
                     </a>
                 </div>
             </footer>
         </main>
         
-    
+        <!--Enlace a archvio de scripts-->
         <script src="js/script.js"></script>
     </body>
 </html>
