@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Jugger Juárez</title>
+            <link rel="stylesheet" href="css/styles.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="flex flex-col items-center justify-center h-screen relative">
+        <!-- Fondo desenfocado -->
+        <div class="bg-blur"></div>
+
+        <!-- Header con el logo -->
+        <header class="header">
+            <div class="logo absolute left-5">
+                <img src="img/logo.png" alt="Logo" class="h-full">
+            </div>
+        </header>
+
+        <!-- Contenedor del formulario de inicio de sesión -->
+        <div class="login-container mt-8">
+            <h2 class="text-3xl font-bold mb-5">Iniciar sesión</h2>
+            <form action="admin_login.php" method="POST">
+                <input type="email" name="email" placeholder="Correo" class="input-field">
+                <input type="password" name="password" placeholder="Contraseña" class="input-field">
+                <button type="submit" class="btn-login">Iniciar sesión</button>
+            </form>
+        </div>
+    </body>
+</html>

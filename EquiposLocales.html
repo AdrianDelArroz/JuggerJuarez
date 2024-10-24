@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugger Juárez</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--Header con logo y botones de navegacion del sitio-->
+    <header class="header">
+        <div class="logo absolute left-5">
+            <img src="img/logo.png" alt="Logo" class="h-full">
+        </div>
+        <nav>
+            <ul class="flex gap-4">
+                <li class="active"><a href="#" >Equipos Locales</a></li>
+                <li><a href="Index.html" >Página Principal</a></li>
+                <li><a href="QueEsJugger.html" >¿Qué es Jugger?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-8">
+        <!-- Barra de búsqueda y botón (invisible hasta que funcione el inciio de sesion) -->
+        <div class="flex items-center justify-between mb-4">
+            <div class="relative w-full max-w-md">
+                <input type="text" class="w-full p-2 pl-10 pr-4 rounded-full shadow-md" placeholder="Buscar equipo...">
+
+                <!--Icono de lupa-->
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.9 14.32A8 8 0 1114.32 12.9l4.387 4.386a1 1 0 01-1.415 1.415L12.9 14.32zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </div>
+
+            <!-- Botón invisible -->
+            <button class="bg-gray-400 text-white px-4 py-2 rounded-full shadow-md opacity-0 cursor-not-allowed">
+                Agregar Equipo +
+            </button>
+        </div>
+
+        <!-- Tabla de equipos -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border-collapse shadow-lg">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="p-3 text-left">Logo</th>
+                        <th class="p-3 text-left">Nombre Equipo</th>
+                        <th class="p-3 text-left">Capitán de Equipo</th>
+                        <th class="p-3 text-left">Partidos</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- fila de equipo -->
+                    <tr class="border-b">
+                        <td class="p-3">
+                            <a href="EstadisticasEquipo.html">
+                                <img src="img/logo1.png" alt="Zylithia Knights Logo" class="h-12 w-12 object-cover">
+                            </a>
+                        </td>
+                        <td class="p-3">Zylithia Knights</td>
+                        <td class="p-3">Alejandro Garcia</td>
+                        <td class="p-3">7</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-3">
+                            <a href="EstadisticasEquipo.html">
+                                <img src="img/logo2.png" alt="Kaijus Logo" class="h-12 w-12 object-cover">
+                            </a>
+                        </td>
+                        <td class="p-3">Kaijus</td>
+                        <td class="p-3">Orlando Tapia</td>
+                        <td class="p-3">24</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!--Footer con links a redes sociales-->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/JuggerCiudadJuarez" target="_blank" aria-label="Facebook">
+                <img src="img/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/juggerciudadjuarez" target="_blank" aria-label="Instagram">
+                <img src="img/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/@juggercd.juarez3566" target="_blank" aria-label="youtube">
+                <img src="img/youtube-icon.png" alt="youtube">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
