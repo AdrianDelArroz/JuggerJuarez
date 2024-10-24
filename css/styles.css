@@ -64,6 +64,70 @@ nav ul li a:hover {
 }
 
 /* Estilos para la sección de noticias y eventos */
+
+/*---Carrusel---*/
+/* Aquí definimos los colores para el carrusel*/
+:root {
+  --fondo: #5E492A;
+  --contenido: #414141;
+  --sombra-ppal: #c9c9c9;
+  --marcado: #D4C065;
+}
+
+li {
+  list-style-type: none;
+}
+
+.carrousel {
+    display: block;
+    width: 100%;
+    max-width: 150em;
+    padding: 1em;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--fondo);
+    overflow: hidden;
+}
+  
+.carrousel .grande {
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--contenido);
+    box-shadow: 0.1em 0.1em 1em var(--sombra-ppal), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: .5em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+  
+.carrousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+  
+.carrousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--fondo);
+    box-shadow: 0.1em 0.1em 1.2em var(--sombra-ppal), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+  
+.carrousel .punto.activo {
+    background-color: var(--marcado);
+}
+
 .noticias-eventos {
     text-align: left;
     padding: 10px;
@@ -77,10 +141,10 @@ nav ul li a:hover {
 }
 
 .eventos-slider {
+    align-items: center;
     display: block;
     text-align: center;
     justify-content: center;
-    gap: 20px;
    /*margin-top: -20px;*/
 }
 
@@ -89,7 +153,7 @@ nav ul li a:hover {
     vertical-align: middle;
     background-color: #fff;
     border: 2px solid #ccc;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin: 0 10px;
     height: auto; /* Permite que la altura se ajuste al contenido */
@@ -320,4 +384,48 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+
+/*---Pagina de inicio de sesion---*/
+
+/* Estilo para el fondo borroso */
+.bg-blur {
+    background-image: url('../img/fondo2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Desenfoque */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Estilo del contenedor del formulario */
+.login-container {
+    background: rgba(218, 165, 32, 0.9); /* Fondo dorado con transparencia */
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.input-field {
+    background: white;
+    border-radius: 50px;
+    border: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-login {
+    background-color: #5B4329;
+    color: white;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+}
 
