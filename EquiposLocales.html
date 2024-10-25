@@ -25,14 +25,13 @@
         </nav>
     </header>
 
-    <main class="container mx-auto mt-8">
-        <!-- Barra de búsqueda y botón (invisible hasta que funcione el inciio de sesion) -->
+    <main class="contenedor mx-auto mt-8">
+        <!-- Barra de búsqueda y botón (invisible hasta que funcione el incio de sesion) -->
         <div class="flex items-center justify-between mb-4">
-            <div class="relative w-full max-w-md">
-                <input type="text" class="w-full p-2 pl-10 pr-4 rounded-full shadow-md" placeholder="Buscar equipo...">
-
+            <div class="barra-busqueda">
+                <input type="text" class="entrada-busqueda" placeholder="Buscar equipo...">
                 <!--Icono de lupa-->
-                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <span class="icono-busqueda">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M12.9 14.32A8 8 0 1114.32 12.9l4.387 4.386a1 1 0 01-1.415 1.415L12.9 14.32zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
                     </svg>
@@ -40,46 +39,95 @@
             </div>
 
             <!-- Botón invisible -->
-            <button class="bg-gray-400 text-white px-4 py-2 rounded-full shadow-md opacity-0 cursor-not-allowed">
-                Agregar Equipo +
+            <button class="boton-invisible ">
+                <a href="AgregarEquipo.html">Agregar Equipo +</a>
             </button>
         </div>
 
         <!-- Tabla de equipos -->
-        <div class="overflow-x-auto">
-            <table class="min-w-full bg-white border-collapse shadow-lg">
-                <thead class="bg-gray-800 text-white">
+        <div class="contenedor-tabla">
+            <table class="tabla-equipos">
+                <thead class="encabezado-tabla">
                     <tr>
-                        <th class="p-3 text-left">Logo</th>
-                        <th class="p-3 text-left">Nombre Equipo</th>
-                        <th class="p-3 text-left">Capitán de Equipo</th>
-                        <th class="p-3 text-left">Partidos</th>
+                        <th class="celda-encabezado">Logo</th>
+                        <th class="celda-encabezado">Nombre Equipo</th>
+                        <th class="celda-encabezado">Capitán de Equipo</th>
+                        <th class="celda-encabezado">Partidos</th>
                     </tr>
                 </thead>
                 <tbody>
 
                     <!-- fila de equipo -->
-                    <tr class="border-b">
-                        <td class="p-3">
+                    <tr class="fila-equipo">
+                        <td class="celda">
                             <a href="EstadisticasEquipo.html">
-                                <img src="img/logo1.png" alt="Zylithia Knights Logo" class="h-12 w-12 object-cover">
+                                <img src="img/logo1.png" alt="EquipoLogo" class="logo-equipo">
                             </a>
                         </td>
-                        <td class="p-3">Zylithia Knights</td>
-                        <td class="p-3">Alejandro Garcia</td>
-                        <td class="p-3">7</td>
+                        <td class="celda">NombreEquipo</td>
+                        <td class="celda">NombreCapitan</td>
+                        <td class="celda">0</td>
                     </tr>
-                    <tr class="border-b">
-                        <td class="p-3">
+                    <tr class="fila-equipo">
+                        <td class="celda">
                             <a href="EstadisticasEquipo.html">
-                                <img src="img/logo2.png" alt="Kaijus Logo" class="h-12 w-12 object-cover">
+                                <img src="img/logo2.png" alt="EquipoLogo" class="logo-equipo">
                             </a>
                         </td>
-                        <td class="p-3">Kaijus</td>
-                        <td class="p-3">Orlando Tapia</td>
-                        <td class="p-3">24</td>
+                        <td class="celda">NombreEquipo</td>
+                        <td class="celda">NombreCapitan</td>
+                        <td class="celda">0</td>
                     </tr>
-
+                    <tr class="fila-equipo">
+                        <td class="celda">
+                            <a href="EstadisticasEquipo.html">
+                                <img src="img/logo3.png" alt="EquipoLogo" class="logo-equipo">
+                            </a>
+                        </td>
+                        <td class="celda">NombreEquipo</td>
+                        <td class="celda">NombreCapitan</td>
+                        <td class="celda">0</td>
+                    </tr>
+                    <tr class="fila-equipo">
+                        <td class="celda">
+                            <a href="EstadisticasEquipo.html">
+                                <img src="img/logo4.png" alt="EquipoLogo" class="logo-equipo">
+                            </a>
+                        </td>
+                        <td class="celda">NombreEquipo</td>
+                        <td class="celda">NombreCapitan</td>
+                        <td class="celda">0</td>
+                    </tr>
+                    <tr class="fila-equipo">
+                        <td class="celda">
+                            <a href="EstadisticasEquipo.html">
+                                <img src="img/logo5.png" alt="EquipoLogo" class="logo-equipo">
+                            </a>
+                        </td>
+                        <td class="celda">NombreEquipo</td>
+                        <td class="celda">NombreCapitan</td>
+                        <td class="celda">0</td>
+                    </tr>
+                    <tr class="fila-equipo">
+                        <td class="celda">
+                            <a href="EstadisticasEquipo.html">
+                                <img src="img/logo6.png" alt="EquipoLogo" class="logo-equipo">
+                            </a>
+                        </td>
+                        <td class="celda">NombreEquipo</td>
+                        <td class="celda">NombreCapitan</td>
+                        <td class="celda">0</td>
+                    </tr>
+                    <tr class="fila-equipo">
+                        <td class="celda">
+                            <a href="EstadisticasEquipo.html">
+                                <img src="img/logo7.png" alt="EquipoLogo" class="logo-equipo">
+                            </a>
+                        </td>
+                        <td class="celda">NombreEquipo</td>
+                        <td class="celda">NombreCapitan</td>
+                        <td class="celda">0</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
