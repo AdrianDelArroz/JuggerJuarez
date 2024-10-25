@@ -238,6 +238,7 @@ li {
     text-align: center;
     color: #fff;
     margin-top: 40px; /* Ajusta el valor para el espacio deseado */
+    
 }
 
 .social-icons {
@@ -403,7 +404,7 @@ li {
 
 /* Estilo del contenedor del formulario */
 .login-container {
-    background: rgba(218, 165, 32, 0.9); /* Fondo dorado con transparencia */
+    background: rgba(218, 165, 32, 1.0);
     padding: 2rem;
     border-radius: 20px;
     max-width: 400px;
@@ -427,6 +428,77 @@ li {
     border-radius: 50px;
     padding: 0.75rem 1.5rem;
     font-weight: bold;
+}
+
+/*---Pagina Equipos locales---*/
+/* Main */
+.barra-busqueda {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 2%;
+}
+
+.entrada-busqueda {
+    width: 100%;
+    padding: 10px 20px;
+    padding-left: 40px;
+    border-radius: 9999px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind: shadow-md */
+    border: 1px solid #ddd;
+}
+
+.icono-busqueda {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.boton-invisible {
+    background-color: #E0E0E0;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Tabla */
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+.tabla-equipos {
+    width: 95%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind: shadow-lg */
+    margin: 0 auto;
+}
+
+.encabezado-tabla {
+    background-color: #1f2937; /* Tailwind: bg-gray-800 */
+    color: white;
+}
+
+.celda-encabezado {
+    padding: 12px;
+    text-align: left;
+}
+
+.fila-equipo {
+    border-bottom: 1px solid #ddd;
+}
+
+.celda {
+    padding: 12px;
+}
+
+/* Logo equipo */
+.logo-equipo {
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
 }
 
 /*---Pagina de estadisticas de equipo---*/
@@ -491,15 +563,6 @@ li {
     color: white;
 }
 
-/* Botón de edición */
-.edit-button {
-    background-color: #E0E0E0;
-    color: #333;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
 /* Botón de vuelta */
 .back-button-container {
     text-align:left;
@@ -509,6 +572,104 @@ li {
 .back-button {
     background-color: #E0E0E0;
     color: #333;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 5px;
+}
+
+/*---Pagina Agregar/editar equipo---*/
+/*Contenedor del formulario*/
+.formulario-equipo {
+    text-align: left;
+    padding: 10px;
+}
+
+.formulario-equipo h1 {
+    padding-left: 20%;
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+/* Contenedor de formulario */
+.contenedor-formulario {
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+    margin: auto;
+}
+
+/* Campos del formulario */
+.campo-formulario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.campo-formulario label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario input[type="number"],
+.campo-formulario input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.campo-formulario input[type="number"] {
+    max-width: 80px;
+}
+
+/* Miembros del equipo */
+.miembros-equipo {
+    margin-top: 20px;
+}
+
+.miembro {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.miembro input[type="text"],
+.miembro input[type="number"] {
+    width: 45%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.eliminar-miembro {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.añadir-miembro {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Botón registrar equipo */
+.btn-registrar-equipo {
+    background-color: #FFB500;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.2em;
 }
