@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugger Juárez</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fondo desenfocado -->
+    <div class="bg-blur"></div>
+
+    <!-- Header con el logo -->
+    <header class="header">
+        <div class="logo absolute left-5">
+            <img src="img/logo.png" alt="Logo" class="h-full">
+        </div>
+    </header>
+
+    <main>
+        <section class="formulario-equipo">
+            <h1>Datos de Equipo</h1>
+            
+            <!-- Contenedor del formulario de agregar equipo -->
+            <div class="contenedor-formulario">
+                <form>
+                    <!-- Nombre de equipo -->
+                    <div class="campo-formulario">
+                        <label for="nombre-equipo">Nombre de equipo</label>
+                        <input type="text" id="nombre-equipo" name="nombre-equipo" placeholder="Nombre de equipo">
+                    </div>
+
+                    <!-- Logo de equipo -->
+                    <div class="campo-formulario">
+                        <label for="logo-equipo">Logo de equipo</label>
+                        <input type="file" id="logo-equipo" name="logo-equipo">
+                    </div>
+
+                    <!-- Partidos totales, victorias y derrotas -->
+                    <div class="campo-formulario">
+                        <label for="partidos-totales">Partidos totales</label>
+                        <input type="number" id="partidos-totales" name="partidos-totales" min="0" value="0">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="victorias-totales">Victorias totales</label>
+                        <input type="number" id="victorias-totales" name="victorias-totales" min="0" value="0">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="derrotas-totales">Derrotas totales</label>
+                        <input type="number" id="derrotas-totales" name="derrotas-totales" min="0" value="0">
+                    </div>
+
+                    <!-- Contenedor miembros del equipo -->
+                    <div class="miembros-equipo">
+                        <label>Miembros del equipo</label>
+
+                        <!-- Capitán de equipo y número -->
+                        <div class="miembro">
+                            <input type="text" id="capitan-equipo" name="capitan-equipo" placeholder="Capitán del equipo">
+                            <input type="number" id="numero-capitan" name="numero-capitan" placeholder="Numero">
+                        </div>
+
+                        <!-- Miembros del equipo y botones para agregar/eliminar miembros -->
+                        <div id="equipo">
+                            <div class="miembro">
+                              <input type="text" name="nombre-miembro[]" placeholder="Nombre del miembro">
+                              <input type="number" name="numero-miembro[]" placeholder="Número del miembro">
+                              <button type="button" class="eliminar-miembro">X</button>
+                            </div>
+                            <button type="button" class="añadir-miembro" id="agregar-miembro">+ Añadir miembro</button>
+                        </div>                          
+                    </div>
+
+                    <!-- Botón de registrar -->
+                    <button type="submit" class="btn-registrar-equipo">Registrar equipo</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!--Enlace a archvio de scripts-->
+    <script src="js/script.js"></script>
+</body>
+</html>
