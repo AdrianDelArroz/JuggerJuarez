@@ -20,6 +20,10 @@ header {
     height: 70px;
 }
 
+.adminIcon img {
+    height: 40px;
+}
+
 /* Estilos para la navegación */
 nav ul {
     list-style: none;
@@ -196,7 +200,7 @@ li {
 
 .quienes-somos .overlay {
     background-color: rgba(137, 137, 137, 0.750); /* Fondo gris con 75% de opacidad */
-    padding: 5px;
+    padding: 10px;
     margin: 0 auto;
     width: 60%; /* Ajusta el ancho según sea necesario */
     border-radius: 10px;
