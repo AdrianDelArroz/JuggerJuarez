@@ -1,154 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugger Juárez</title>
+    <title>Gestionar Equipos</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- TailwindCSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js"></script>
 </head>
+
 <body>
-    <!--Header con logo y botones de navegacion del sitio-->
-    <header class="header">
-        <div class="logo absolute left-5">
-            <a href="index.html" ><img src="img/logo.png" alt="Logo" class="h-full"></a>
-        </div>
-        <nav>
-            <ul class="flex gap-4">
-                <li class="active"><a href="#" >Equipos Locales</a></li>
-                <li><a href="index.html" >Página Principal</a></li>
-                <li><a href="QueEsJugger.html" >¿Qué es Jugger?</a></li>
-            </ul>
-        </nav>
-        <div class="adminIcon absolute right-5">
-            <img src="img/AdminIcon.png" alt="AdminIcon" class="h-full">
-        </div>
-    </header>
-
-    <main class="contenedor">
-        <!-- Barra de búsqueda y botón (invisible hasta que funcione el incio de sesion) -->
-        <div class="flex items-center justify-between mb-4">
-            <div class="barra-busqueda">
-                <input type="text" class="entrada-busqueda" placeholder="Buscar equipo...">
-                <!--Icono de lupa-->
-                <span class="icono-busqueda">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.9 14.32A8 8 0 1114.32 12.9l4.387 4.386a1 1 0 01-1.415 1.415L12.9 14.32zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </div>
-
-            <!-- Botón invisible -->
-            <button class="boton-invisible ">
-                <a href="AgregarEquipo.html">Agregar Equipo +</a>
-            </button>
-        </div>
-
-        <!-- Tabla de equipos -->
-        <div class="contenedor-tabla">
-            <table class="tabla-equipos">
-                <thead class="encabezado-tabla">
-                    <tr>
-                        <th class="celda-encabezado">Logo</th>
-                        <th class="celda-encabezado">Nombre Equipo</th>
-                        <th class="celda-encabezado">Capitán de Equipo</th>
-                        <th class="celda-encabezado">Partidos</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <!-- fila de equipo -->
-                    <tr class="fila-equipo">
-                        <td class="celda">
-                            <a href="EstadisticasEquipo.html">
-                                <img src="img/logo1.png" alt="EquipoLogo" class="logo-equipo">
-                            </a>
-                        </td>
-                        <td class="celda">NombreEquipo</td>
-                        <td class="celda">NombreCapitan</td>
-                        <td class="celda">0</td>
-                    </tr>
-                    <tr class="fila-equipo">
-                        <td class="celda">
-                            <a href="EstadisticasEquipo.html">
-                                <img src="img/logo2.png" alt="EquipoLogo" class="logo-equipo">
-                            </a>
-                        </td>
-                        <td class="celda">NombreEquipo</td>
-                        <td class="celda">NombreCapitan</td>
-                        <td class="celda">0</td>
-                    </tr>
-                    <tr class="fila-equipo">
-                        <td class="celda">
-                            <a href="EstadisticasEquipo.html">
-                                <img src="img/logo3.png" alt="EquipoLogo" class="logo-equipo">
-                            </a>
-                        </td>
-                        <td class="celda">NombreEquipo</td>
-                        <td class="celda">NombreCapitan</td>
-                        <td class="celda">0</td>
-                    </tr>
-                    <tr class="fila-equipo">
-                        <td class="celda">
-                            <a href="EstadisticasEquipo.html">
-                                <img src="img/logo4.png" alt="EquipoLogo" class="logo-equipo">
-                            </a>
-                        </td>
-                        <td class="celda">NombreEquipo</td>
-                        <td class="celda">NombreCapitan</td>
-                        <td class="celda">0</td>
-                    </tr>
-                    <tr class="fila-equipo">
-                        <td class="celda">
-                            <a href="EstadisticasEquipo.html">
-                                <img src="img/logo5.png" alt="EquipoLogo" class="logo-equipo">
-                            </a>
-                        </td>
-                        <td class="celda">NombreEquipo</td>
-                        <td class="celda">NombreCapitan</td>
-                        <td class="celda">0</td>
-                    </tr>
-                    <tr class="fila-equipo">
-                        <td class="celda">
-                            <a href="EstadisticasEquipo.html">
-                                <img src="img/logo6.png" alt="EquipoLogo" class="logo-equipo">
-                            </a>
-                        </td>
-                        <td class="celda">NombreEquipo</td>
-                        <td class="celda">NombreCapitan</td>
-                        <td class="celda">0</td>
-                    </tr>
-                    <tr class="fila-equipo">
-                        <td class="celda">
-                            <a href="EstadisticasEquipo.html">
-                                <img src="img/logo7.png" alt="EquipoLogo" class="logo-equipo">
-                            </a>
-                        </td>
-                        <td class="celda">NombreEquipo</td>
-                        <td class="celda">NombreCapitan</td>
-                        <td class="celda">0</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </main>
-</body>
-
-<!--Footer con links a redes sociales-->
-<footer class="footer">
-    <div class="social-icons">
-        <a href="https://www.facebook.com/JuggerCiudadJuarez" target="_blank" aria-label="Facebook">
-            <img src="img/facebook-icon.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/juggerciudadjuarez" target="_blank" aria-label="Instagram">
-            <img src="img/instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://www.youtube.com/@juggercd.juarez3566" target="_blank" aria-label="youtube">
-            <img src="img/youtube-icon.png" alt="youtube">
+<header class="header">
+    <div class="logo absolute left-5">
+        <a href="index.html">
+            <img src="img/logo.png" alt="Logo de Jugger Juárez" class="h-full">
         </a>
     </div>
-</footer>
+    <nav>
+        <ul class="flex gap-4">
+            <li class="active"><a href="EquiposLocales.html" class="text-lg font-semibold hover:text-blue-600">Equipos Locales</a></li>
+            <li><a href="index.html" class="text-lg font-semibold hover:text-blue-600">Página Principal</a></li>
+            <li><a href="QueEsJugger.html" class="text-lg font-semibold hover:text-blue-600">¿Qué es Jugger?</a></li>
+            <!-- Botones ocultos por defecto -->
+           
+        </ul>
+    </nav>
+</header>
+
+    <div class="container mx-auto p-6">
+
+
+        <!-- Botón para mostrar el formulario de registro -->
+        <button id="btnMostrarFormulario" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700 mb-6 hidden">
+            Mostrar Formulario de Registro
+        </button>
+        
+
+        <!-- Formulario de registro de equipo oculto -->
+        <div class="form-container hidden bg-white p-6 rounded-lg shadow-lg" id="formContainer">
+            <h2 class="text-2xl text-center font-semibold mb-4">Registrar Equipo</h2>
+            <form id="formRegistroEquipo">
+                <div class="mb-4">
+                    <label for="nombre-equipo" class="text-lg font-semibold">Nombre del equipo:</label>
+                    <input type="text" id="nombre-equipo" class="w-full p-2 border rounded-md mt-2" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="logo-equipo" class="text-lg font-semibold">Logo del equipo:</label>
+                    <input type="file" id="logo-equipo" class="w-full p-2 border rounded-md mt-2">
+                </div>
+
+                <div class="mb-4">
+                    <label for="partidos-totales" class="text-lg font-semibold">Partidos Totales:</label>
+                    <input type="number" id="partidos-totales" class="w-full p-2 border rounded-md mt-2">
+                </div>
+
+                <div class="mb-4">
+                    <label for="victorias-totales" class="text-lg font-semibold">Victorias Totales:</label>
+                    <input type="number" id="victorias-totales" class="w-full p-2 border rounded-md mt-2">
+                </div>
+
+                <div class="mb-4">
+                    <label for="derrotas-totales" class="text-lg font-semibold">Derrotas Totales:</label>
+                    <input type="number" id="derrotas-totales" class="w-full p-2 border rounded-md mt-2">
+                </div>
+
+                <div class="mb-4">
+                    <label for="capitan-equipo" class="text-lg font-semibold">Capitán del equipo:</label>
+                    <input type="text" id="capitan-equipo" class="w-full p-2 border rounded-md mt-2" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="numero-capitan" class="text-lg font-semibold">Número del Capitán:</label>
+                    <input type="number" id="numero-capitan" class="w-full p-2 border rounded-md mt-2" required>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-2">Miembros del equipo:</h3>
+                <div id="miembros-container">
+                    <div class="miembro mb-2">
+                        <input type="text" name="nombre-miembro[]" placeholder="Nombre del miembro" class="p-2 border rounded-md w-3/4" required>
+                        <input type="number" name="numero-miembro[]" placeholder="Número del miembro" class="p-2 border rounded-md w-1/4 ml-2" required><br>
+                    </div>
+                </div>
+
+                <button type="button" id="btnAgregarMiembro" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700 mt-4">Agregar miembro</button><br><br>
+                <button type="submit" id="btnAgregarEquipo" class="bg-green-500 text-white p-2 rounded-md hover:bg-green-700 mt-4">Registrar Equipo</button>
+            </form>
+        </div>
+
+        <!-- Tabla para mostrar los equipos registrados -->
+        <h2 class="text-2xl text-center font-semibold my-6">Equipos Registrados</h2>
+        <table class="min-w-full table-auto border-collapse bg-white shadow-lg rounded-lg">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="p-4 text-left">Logo</th>
+                    <th class="p-4 text-left">Nombre del Equipo</th>
+                    <th class="p-4 text-left">Capitán</th>
+                    <th class="p-4 text-left">Partidos Totales</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-equipos-body" class="bg-gray-100">
+                <!-- Los equipos registrados se mostrarán aquí -->
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer bg-gray-900 text-white py-6">
+        <div class="footer-content container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo Jugger Juárez" class="h-16">
+            </div>
+            <div class="footer-info text-center md:text-left">
+                <p>&copy; 2024 Jugger Juárez. Todos los derechos reservados.</p>
+                <ul class="footer-links flex justify-center md:justify-start gap-4 mt-2">
+                    <li><a href="#" class="hover:underline">Términos y condiciones</a></li>
+                    <li><a href="#" class="hover:underline">Política de privacidad</a></li>
+                    <li><a href="#" class="hover:underline">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Código de Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAx0R2Usa56ZAXupMXvch3CVqt4FUl6udQ",
+            authDomain: "juggerjuarez-ac30c.firebaseapp.com",
+            projectId: "juggerjuarez-ac30c",
+            storageBucket: "juggerjuarez-ac30c.appspot.com",
+            messagingSenderId: "674759342914",
+            appId: "1:674759342914:web:3af3648c69b3eb849e66db"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+
+        // Función para agregar datos a Firestore
+        async function addData(collectionName, data) {
+            try {
+                await addDoc(collection(db, collectionName), data);
+                alert("Datos guardados correctamente.");
+            } catch (error) {
+                console.error('Error al guardar datos: ' + error.message);
+            }
+        }
+
+        // Función para obtener los equipos de Firestore
+        async function obtenerEquipos() {
+            try {
+                const equiposRef = collection(db, "equipos");
+                const snapshot = await getDocs(equiposRef);
+                const tablaEquiposBody = document.getElementById('tabla-equipos-body');
+                tablaEquiposBody.innerHTML = '';
+
+                snapshot.forEach((doc) => {
+                    const equipo = doc.data();
+                    const fila = document.createElement('tr');
+                    fila.innerHTML = `
+                        <td class="p-4"><img src="${equipo.logo || 'img/default-logo.png'}" alt="${equipo.nombre}" class="h-16 w-16 object-cover"></td>
+                        <td class="p-4">${equipo.nombre}</td>
+                        <td class="p-4">${equipo.capitan.nombre}</td>
+                        <td class="p-4">${equipo.partidosTotales}</td>
+                    `;
+                    tablaEquiposBody.appendChild(fila);
+                });
+            } catch (error) {
+                console.error('Error al obtener los equipos:', error.message);
+            }
+        }
+
+        // Agregar evento de envío del formulario
+        document.getElementById('formRegistroEquipo').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const nombreEquipo = document.getElementById('nombre-equipo').value;
+            const logoEquipo = document.getElementById('logo-equipo').files[0];
+            const partidosTotales = document.getElementById('partidos-totales').value;
+            const victoriasTotales = document.getElementById('victorias-totales').value;
+            const derrotasTotales = document.getElementById('derrotas-totales').value;
+            const capitanNombre = document.getElementById('capitan-equipo').value;
+            const capitanNumero = document.getElementById('numero-capitan').value;
+
+            // Subir el logo del equipo si se proporciona uno
+            let logoURL = '';
+            if (logoEquipo) {
+                const logoRef = ref(storage, `logos/${logoEquipo.name}`);
+                await uploadBytes(logoRef, logoEquipo);
+                logoURL = await getDownloadURL(logoRef);
+            }
+
+            const data = {
+                nombre: nombreEquipo,
+                logo: logoURL,
+                partidosTotales: partidosTotales,
+                victoriasTotales: victoriasTotales,
+                derrotasTotales: derrotasTotales,
+                capitan: {
+                    nombre: capitanNombre,
+                    numero: capitanNumero
+                },
+                miembros: Array.from(document.querySelectorAll('[name="nombre-miembro[]"]')).map((input, i) => ({
+                    nombre: input.value,
+                    numero: document.querySelectorAll('[name="numero-miembro[]"]')[i].value
+                }))
+            };
+
+            await addData("equipos", data);
+            obtenerEquipos();
+            document.getElementById('formRegistroEquipo').reset();
+            document.getElementById('formContainer').classList.add('hidden');
+        });
+
+        // Mostrar el formulario al hacer click
+        document.getElementById('btnMostrarFormulario').addEventListener('click', () => {
+            document.getElementById('formContainer').classList.toggle('hidden');
+        });
+
+        // Cargar equipos al cargar la página
+        window.onload = obtenerEquipos;
+    </script>
+</body>
 </html>

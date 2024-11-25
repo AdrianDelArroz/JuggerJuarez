@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugger Juárez</title>
+    <title>Editar Equipo - Jugger Juárez</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,77 +17,187 @@
     <!-- Header con el logo -->
     <header class="header">
         <div class="logo absolute left-5">
-            <a href="index.html" ><img src="img/logo.png" alt="Logo" class="h-full"></a>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo de Jugger Juárez" class="h-full">
+            </a>
         </div>
+        
+        <nav>
+            <ul class="flex gap-4">
+                <li><a href="AgregarEquipo.html" class="text-lg font-semibold hover:text-blue-600">Agregar Equipo</a></li>
+                <li class="active"><a href="#" class="text-lg font-semibold hover:text-blue-600">Editar Equipo</a></li>
+            </ul>
+        </nav>
         <div class="adminIcon absolute right-5">
             <img src="img/AdminIcon.png" alt="AdminIcon" class="h-full">
         </div>
     </header>
 
     <main>
+        <!-- Sección de formulario de equipo -->
         <section class="formulario-equipo">
-            <h1>Datos de Equipo</h1>
-            
-            <!-- Contenedor del formulario de agregar equipo -->
+            <h1>Editar Datos de Equipo</h1>
             <div class="contenedor-formulario">
-                <form>
-                    <!-- Nombre de equipo -->
+                <form id="formulario-editar-equipo">
                     <div class="campo-formulario">
                         <label for="nombre-equipo">Nombre de equipo</label>
-                        <input type="text" id="nombre-equipo" name="nombre-equipo" placeholder="Nombre de equipo">
+                        <input type="text" id="nombre-equipo" value="Nombre Actual del Equipo">
                     </div>
 
-                    <!-- Logo de equipo -->
                     <div class="campo-formulario">
                         <label for="logo-equipo">Logo de equipo</label>
-                        <input type="file" id="logo-equipo" name="logo-equipo">
+                        <input type="file" id="logo-equipo">
                     </div>
 
-                    <!-- Partidos totales, victorias y derrotas -->
                     <div class="campo-formulario">
                         <label for="partidos-totales">Partidos totales</label>
-                        <input type="number" id="partidos-totales" name="partidos-totales" min="0" value="0">
+                        <input type="number" id="partidos-totales" min="0" value="10">
                     </div>
 
                     <div class="campo-formulario">
                         <label for="victorias-totales">Victorias totales</label>
-                        <input type="number" id="victorias-totales" name="victorias-totales" min="0" value="0">
+                        <input type="number" id="victorias-totales" min="0" value="5">
                     </div>
 
                     <div class="campo-formulario">
                         <label for="derrotas-totales">Derrotas totales</label>
-                        <input type="number" id="derrotas-totales" name="derrotas-totales" min="0" value="0">
+                        <input type="number" id="derrotas-totales" min="0" value="5">
                     </div>
 
-                    <!-- Contenedor miembros del equipo -->
+                    <div class="campo-formulario">
+                        <label>Capitán del equipo</label>
+                        <input type="text" id="capitan-equipo" value="Capitán Actual">
+                        <input type="number" id="numero-capitan" value="10">
+                    </div>
+
                     <div class="miembros-equipo">
                         <label>Miembros del equipo</label>
-
-                        <!-- Capitán de equipo y número -->
-                        <div class="miembro">
-                            <input type="text" id="capitan-equipo" name="capitan-equipo" placeholder="Capitán del equipo">
-                            <input type="number" id="numero-capitan" name="numero-capitan" placeholder="Numero">
+                        <div id="contenedor-miembros">
+                            <!-- Miembros se agregarán dinámicamente aquí -->
                         </div>
-
-                        <!-- Miembros del equipo y botones para agregar/eliminar miembros -->
-                        <div id="equipo">
-                            <div class="miembro">
-                              <input type="text" name="nombre-miembro[]" placeholder="Nombre del miembro">
-                              <input type="number" name="numero-miembro[]" placeholder="Número del miembro">
-                              <button type="button" class="eliminar-miembro">X</button>
-                            </div>
-                            <button type="button" class="añadir-miembro" id="agregar-miembro">+ Añadir miembro</button>
-                        </div>                          
+                        <button type="button" id="agregar-miembro" class="btn btn-secondary">+ Añadir miembro</button>
                     </div>
 
-                    <!-- Botón de actualizar -->
-                    <button type="submit" class="btn-registrar-equipo"><a href="EstadisticasEquipo.html">Actualizar equipo</a></button>
+                    <div class="acciones-equipo">
+                        <button type="submit" id="btn-actualizar-equipo" class="btn btn-primary">Actualizar equipo</button>
+                        <button type="button" id="btn-eliminar-equipo" class="btn btn-danger">Eliminar equipo</button>
+                    </div>
                 </form>
             </div>
         </section>
+
+        <!-- Tabla de Equipos Registrados -->
+        <section class="tabla-equipos">
+            <h2>Equipos Registrados</h2>
+            <table class="table-auto w-full mt-5 border-collapse">
+                <thead>
+                    <tr>
+                        <th class="border px-4 py-2">Logo</th>
+                        <th class="border px-4 py-2">Nombre de Equipo</th>
+                        <th class="border px-4 py-2">Capitán</th>
+                        <th class="border px-4 py-2">Partidos Totales</th>
+                        <th class="border px-4 py-2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-equipos-body">
+                    <!-- Los equipos registrados se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </section>
     </main>
-    
-    <!--Enlace a archvio de scripts-->
-    <script src="js/script.js"></script>
+
+    <!-- Código de Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAx0R2Usa56ZAXupMXvch3CVqt4FUl6udQ",
+            authDomain: "juggerjuarez-ac30c.firebaseapp.com",
+            projectId: "juggerjuarez-ac30c",
+            storageBucket: "juggerjuarez-ac30c.appspot.com",
+            messagingSenderId: "674759342914",
+            appId: "1:674759342914:web:3af3648c69b3eb849e66db"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+
+        // Función para agregar datos a Firestore
+        async function addData(collectionName, data) {
+            try {
+                await addDoc(collection(db, collectionName), data);
+                alert("Datos guardados correctamente.");
+            } catch (error) {
+                console.error('Error al guardar datos: ' + error.message);
+            }
+        }
+
+        // Función para obtener los equipos de Firestore
+        async function obtenerEquipos() {
+            try {
+                const equiposRef = collection(db, "equipos");
+                const snapshot = await getDocs(equiposRef);
+                const tablaEquiposBody = document.getElementById('tabla-equipos-body');
+                tablaEquiposBody.innerHTML = '';
+
+                snapshot.forEach((doc) => {
+                    const equipo = doc.data();
+                    const fila = document.createElement('tr');
+                    fila.innerHTML = `
+                        <td class="p-4"><img src="${equipo.logo || 'img/default-logo.png'}" alt="${equipo.nombre}" class="h-16 w-16 object-cover"></td>
+                        <td class="p-4">${equipo.nombre}</td>
+                        <td class="p-4">${equipo.capitan.nombre}</td>
+                        <td class="p-4">${equipo.partidosTotales}</td>
+                    `;
+                    tablaEquiposBody.appendChild(fila);
+                });
+            } catch (error) {
+                console.error('Error al obtener los equipos:', error.message);
+            }
+        }
+
+        // Agregar evento de envío del formulario
+        document.getElementById('formulario-editar-equipo').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const nombreEquipo = document.getElementById('nombre-equipo').value;
+            const logoEquipo = document.getElementById('logo-equipo').files[0];
+            const partidosTotales = document.getElementById('partidos-totales').value;
+            const victoriasTotales = document.getElementById('victorias-totales').value;
+            const derrotasTotales = document.getElementById('derrotas-totales').value;
+            const capitanNombre = document.getElementById('capitan-equipo').value;
+            const capitanNumero = document.getElementById('numero-capitan').value;
+
+            // Subir el logo del equipo si se proporciona uno
+            let logoURL = '';
+            if (logoEquipo) {
+                const logoRef = ref(storage, `logos/${logoEquipo.name}`);
+                await uploadBytes(logoRef, logoEquipo);
+                logoURL = await getDownloadURL(logoRef);
+            }
+
+            const data = {
+                nombre: nombreEquipo,
+                logo: logoURL,
+                partidosTotales: partidosTotales,
+                victoriasTotales: victoriasTotales,
+                derrotasTotales: derrotasTotales,
+                capitan: {
+                    nombre: capitanNombre,
+                    numero: capitanNumero
+                }
+            };
+
+            await addData('equipos', data);
+        });
+
+        // Llamada inicial para mostrar los equipos
+        obtenerEquipos();
+    </script>
 </body>
 </html>
